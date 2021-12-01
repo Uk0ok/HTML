@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 스타일</title>
+    <style>
+        body {
+            /* background-color: darkblue; */
+            /* background-color: #e067c2; */
+            /* background-color: rgb(0, 255, 50); */
+            background-color: rgba(255, 251, 0, 0.5);
+            /* background-color: hsla(36, 100%, 50%, 0.4); */
+        }
+
+        #div-bg {
+            width: 50%;
+            background-color: #ffffff;
+        }
+
+        .clip-test {
+            background-color: white;
+            margin: 30px;
+            padding: 30px;
+            width: 30%;
+            border: 15px dashed rgba(0, 0, 0, 0.3);
+        }
+
+        #clip1 {
+            background-clip: border-box;
+        }
+
+        #clip2 {
+            background-clip: padding-box;
+        }
+
+        #clip3 {
+            background-clip: content-box;
+        }
+
+        #bg-img {
+            border: 15px solid rgba(0, 0, 0, 0.3);
+            width: 70%;
+            height: 800px;
+            padding: 50px;
+            background-image: url('../resources/image/bgsample.PNG');
+
+            /* 이미지 반복 설정 */
+            /* 기본값 */
+            /* background-repeat : repeat */
+            /* background-repeat : repeat-x */
+            /* background-repeat : repeat-y */
+            background-repeat : no-repeat;
+
+            /* 이미지 크기 설정 */
+            /* 기본값 */
+            /* background-size : auto; */
+            /* background-size : contain; */
+            /* background-size: cover; */
+            /* background-size: 100% 100%; */
+            background-size: 350px 200px;
+
+            /* 이미지 위치 설정 */
+            /* 기본값 */
+            /* background-position: left top; */
+            /* background-position: right top; */
+            /* background-position: center top; */
+            /* background-position: center; */
+            /* background-position: bottom; */
+
+            /* 이미지 배치 기준 설정 */
+            /* background-origin: border-box; */
+            /* 기본값 */
+            /* background-origin: padding-box; */
+            /* background-origin: content-box; */
+
+            /* 이미지를 고정하도록 설정 */
+            /* 기본값 */
+            /* background-attachment: scroll; */
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>색상 스타일</h1>
+    <hr>
+    <h2>background-color</h2>
+
+    <div id="div-bg">
+            국내 연구진이 공정에 높은 온도가 필요하지 않으면서도 고해상도를 낼 수 있는 소재 기술을 개발했다. 더 나아가 이를 디스플레이에 적용해 실제 제품까지 상용화하는 데 성공했다. 
+
+        9일 한국전자통신연구원(ETRI)은 100℃ 이하 공정온도에서도 픽셀 크기가 3μm 이하로 만들 수 있는 소재 기술을 개발하고 이를 국내 최초로 OLED 마이크로디스플레이에 적용했다고 밝혔다.
+
+        디스플레이는 빛을 받으면 화학적 특성이 달라지는 포토레지스트라는 소재로 얇은 막에 세밀한 픽셀을 형성해 만든다.
+    </div>
+
+    <h3>background-clip</h3>
+
+    <div id="clip1" class="clip-test">
+        국내 연구진이 공정에 높은 온도가 필요하지 않으면서도 고해상도를 낼 수 있는 소재 기술을 개발했다. 더 나아가 이를 디스플레이에 적용해 실제 제품까지 상용화하는 데 성공했다. 
+
+    9일 한국전자통신연구원(ETRI)은 100℃ 이하 공정온도에서도 픽셀 크기가 3μm 이하로 만들 수 있는 소재 기술을 개발하고 이를 국내 최초로 OLED 마이크로디스플레이에 적용했다고 밝혔다.
+
+    디스플레이는 빛을 받으면 화학적 특성이 달라지는 포토레지스트라는 소재로 얇은 막에 세밀한 픽셀을 형성해 만든다.
+    </div>
+
+    <div id="clip2" class="clip-test">
+        국내 연구진이 공정에 높은 온도가 필요하지 않으면서도 고해상도를 낼 수 있는 소재 기술을 개발했다. 더 나아가 이를 디스플레이에 적용해 실제 제품까지 상용화하는 데 성공했다. 
+
+    9일 한국전자통신연구원(ETRI)은 100℃ 이하 공정온도에서도 픽셀 크기가 3μm 이하로 만들 수 있는 소재 기술을 개발하고 이를 국내 최초로 OLED 마이크로디스플레이에 적용했다고 밝혔다.
+
+    디스플레이는 빛을 받으면 화학적 특성이 달라지는 포토레지스트라는 소재로 얇은 막에 세밀한 픽셀을 형성해 만든다.
+    </div>
+
+    <div id="clip3" class="clip-test">
+        국내 연구진이 공정에 높은 온도가 필요하지 않으면서도 고해상도를 낼 수 있는 소재 기술을 개발했다. 더 나아가 이를 디스플레이에 적용해 실제 제품까지 상용화하는 데 성공했다. 
+
+    9일 한국전자통신연구원(ETRI)은 100℃ 이하 공정온도에서도 픽셀 크기가 3μm 이하로 만들 수 있는 소재 기술을 개발하고 이를 국내 최초로 OLED 마이크로디스플레이에 적용했다고 밝혔다.
+
+    디스플레이는 빛을 받으면 화학적 특성이 달라지는 포토레지스트라는 소재로 얇은 막에 세밀한 픽셀을 형성해 만든다.
+    </div>
+
+    <hr>
+
+    <h2>background-image</h2>
+
+    <div id="bg-img"></div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

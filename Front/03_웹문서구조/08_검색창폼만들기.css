@@ -1,0 +1,48 @@
+div, input {
+    /* border: 1px solid skyblue; */
+    box-sizing: border-box;
+}
+
+#header-contents2 {
+    width: 600px;
+    height: 200px
+}
+
+#search-wrap {
+    width: 300px;
+    height: 30px;
+    /* position: absolute;
+    left: 150px;
+    top: 200px; */
+    margin: auto;
+    position: relative;
+    top: 150px;
+}
+
+#search-form {
+    width: 100%;
+    height: 100%;
+}
+
+#search-form-input {
+    height: 100%;
+    width: 80%;
+    float: left;
+}
+
+#search-form-submit {
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+#search-form-input>input {
+    width: 100%;
+    height: 100%;
+}
+
+#search-form-submit>input {
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+}

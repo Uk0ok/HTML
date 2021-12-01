@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일</title>
+    <link rel="stylesheet" href="./05_레이아웃스타일.css">
+</head>
+<body>
+    <h1>레이아웃 스타일</h1> 
+
+    <hr>
+
+    <h2>기본 스타일</h2>
+    <h3>width, hegiht</h3>
+    <h4>고정크기</h4>
+    <div id="fixed-size" class="size-test"></div>
+
+    <h4>가변크기</h4>
+    <div id="variable-size" class="size-test"></div>
+
+    <h3>화면 배치 방법 변경</h3>
+    <!--  
+        block 요소를 inline 요소로 변경
+    -->
+    <p>display : inline</p>
+    <div class="display display-inline area1">1 번쨰 영역</div>
+    <div class="display display-inline area2">2 번쨰 영역</div>
+    <div class="display display-inline area3">3 번쨰 영역</div>
+    <div class="display display-inline area4">4 번쨰 영역</div>
+    <div class="display display-inline area5">5 번쨰 영역</div>
+
+
+    <p>display : inline-block</p>
+    <div class="display display-inline-block area1">1 번쨰 영역</div>
+    <div class="display display-inline-block area2">2 번쨰 영역</div>
+    <div class="display display-inline-block area3">3 번쨰 영역</div>
+    <div class="display display-inline-block area4">4 번쨰 영역</div>
+    <div class="display display-inline-block area5">5 번쨰 영역</div>
+
+    <!--  
+        인라인 요소를 블록 요소로 변경
+    -->
+    <p>display : block</p>
+    <span class="display display-block area1">1 번째 영역</span>
+    <span class="display display-block area2">2 번째 영역</span>
+    <span class="display display-block area3">3 번째 영역</span>
+    <span class="display display-block area4">4 번째 영역</span>
+    <span class="display display-block area5">5 번째 영역</span>
+
+    <hr>
+
+    <h3>테두리 스타일</h3>
+    <div class="border" id="border-test1"></div>
+    <div class="border" id="border-test2"></div>
+    <div class="border" id="border-test3"></div>
+    <div class="border" id="border-test4"></div>
+    <div class="border" id="border-test5"></div>
+    <div class="border" id="border-test6"></div>
+    <div class="border" id="border-test7"></div>
+    <div class="border" id="border-test8"></div>
+    <div class="border" id="border-test9"></div>
+    <div class="border" id="border-test10"></div>
+
+    <hr>
+
+    <h2>여백 스타일</h2>
+    <div class="space">기준 div</div>
+
+    <h3>padding</h3>
+    <!--  
+        테두리와 콘텐츠 영역 사이의 거리 조절 
+    -->
+    <div class="space" id="padding1">전체 padding</div>
+
+    <br>
+
+    <div class="space" id="padding2">부분 padding</div>
+
+    <h3>margin</h3>
+    <!--  
+        다른 요소들 간의 간격 조절
+    -->
+    <div class="space" id="margin1">전체 margin</div>
+    <div class="space" id="margin2">부분 margin</div>
+
+    <hr>
+
+    <h2>p포지셔닝</h2>
+    <!--  
+        CSS를 이용해서 여러 요스를 적절하게 배치하는 것을 뜻한다.
+    -->
+    <h3>절대 위치와 상대 위치</h3>
+    <div class="outer">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+
+    <h3>고정 위치</h3>
+    <!-- <div id="fixed-area"></div> -->
+
+    <hr>
+
+    <h3>visibility</h3>
+    <div class="visibility" id="v-test1"></div>
+    <div class="visibility" id="v-test2"></div>
+    <div class="visibility" id="v-test3"></div>
+
+    <hr>
+
+    <h3>z-index</h3>
+    <div id="z-wrap">
+        <div class="z-test" id="z1"></div>
+        <div class="z-test" id="z2"></div>
+        <div class="z-test" id="z3"></div>
+    </div>
+
+    <hr>
+
+    <h3>float, clear</h3>
+    <div class="float-test">001</div>
+    <div class="float-test">002</div>
+    <div class="float-test">003</div>
+    <div class="float-test">004</div>
+    <div class="float-test">005</div>
+
+    <hr style="clear: both;">
+
+    <h2>다단 스타일</h2>
+    <h3>단의 너비를 이용하여 단 나누기</h3>
+    <div class="column-wrap" id="column1">
+        <h5>OLED용 저온 포토레지스트 상용화</h5>
+        <p>
+                국내 연구진이 공정에 높은 온도가 필요하지 않으면서도 고해상도를 낼 수 있는 소재 기술을 개발했다. 더 나아가 이를 디스플레이에 적용해 실제 제품까지 상용화하는 데 성공했다. 
+
+            9일 한국전자통신연구원(ETRI)은 100℃ 이하 공정온도에서도 픽셀 크기가 3μm 이하로 만들 수 있는 소재 기술을 개발하고 이를 국내 최초로 OLED 마이크로디스플레이에 적용했다고 밝혔다.
+
+            디스플레이는 빛을 받으면 화학적 특성이 달라지는 포토레지스트라는 소재로 얇은 막에 세밀한 픽셀을 형성해 만든다. 포토레지스트는 디스플레이를 만드는 데 꼭 필요하지만, 소재를 만들거나 이를 다루는 기술이 어려워 그간 주로 수입 제품에 의존해오고 있다. 
+
+            2019년부터 수출규제가 시작된 뒤, ETRI는 ‘ICT 소재·부품·장비 자립 및 도전기술 개발’ 과제와 ‘저온 경화 및 고해상도 컬러 포토레지스트 소재 개발’과제 등을 수행하며 기술 자립을 위해 노력해오고 있다.
+
+            ETRI에 따르면 지금까지 포토레지스트 소재는 높은 온도에서 공정을 진행했다. 기존에 많이 쓰인 LCD 디스플레이는 구조상 유리막이 있어 고온에서 공정을 진행해도 문제가 없었지만 차세대 디스플레이로 떠오른 OLED는 높은 온도에서 빛을 내는 발광다이오드에 문제가 생길 수 있다. 
+
+            이로 인해 낮은 온도에서도 공정이 가능한 소재 기술을 개발하는 것이 관건이었다. 우선 과제 참여기관인 SKC 하이테크앤마케팅과 동진쎄미켐에서 포토레지스트의 핵심원료인 안료를 국산화하고 이를 적절히 배합하면서 낮은 온도에서도 색이 균일하게 도포될 수 있는 포토레지스트 소재를 만들었다. 
+
+            개발된 소재는 국내 경쟁기업은 물론, 일본 기업에서도 개발하지 못한 혁신적인 성과로 평가받고 있다는 설명이다. ETRI는 개발된 포토레지스트 소재를 국내 최초로 OLED에 적용했다. 연구진이 만든 시제품은 웨어러블 기기에 적합한 0.7인치 크기의 마이크로디스플레이다. 한 픽셀 당 크기는 3μm 이하로 1인치당 2300개 픽셀을 밀집해 초고해상도 패널을 제작할 수 있다. 
+
+            연구진은 2016년부터 증강현실(AR) 구현을 위한 OLED 마이크로디스플레이 관련 연구를 진행하며 시제품을 만드는 플랫폼 역할을 수행했다. 이외에도 개발된 소재의 성능을 평가하거나 세계적인 학술대회와 전시회 출품도 지원했다. 이후 삼성디스플레이는 올해 초 출시한 모바일용 OLED에 저온 PR을 활용했다. 세계 최초 상용화다.
+
+            연구를 주도한 ETRI 조남성 책임연구원은 “정부와 기업, 국책연구소가 함께 국가 과제를 통해 원천 소재 국산화를 이루는 데 성공했다”며 “이번 성과가 소부장 자립은 물론, 우리나라가 디스플레이 산업 종주국 지위를 유지하는 데 도움이 되기를 바란다”고 강조했다.
+
+            향후 ETRI는 1인치당 픽셀이 3000개가 들어갈 정도로 더욱 높은 해상도를 지닌 패널을 개발하기 위한 후속 연구를 진행할 예정이다. 개발된 마이크로디스플레이 기술을 관련 기업에 이전하는 논의를 진행 중이다.
+        </p>
+    </div>
+
+    <h3>단의 개수를 이용하여 단 나누기</h3>
+    <div class="column-wrap" id="column2">
+        <h5>OLED용 저온 포토레지스트 상용화</h5>
+        <p>
+                국내 연구진이 공정에 높은 온도가 필요하지 않으면서도 고해상도를 낼 수 있는 소재 기술을 개발했다. 더 나아가 이를 디스플레이에 적용해 실제 제품까지 상용화하는 데 성공했다. 
+
+            9일 한국전자통신연구원(ETRI)은 100℃ 이하 공정온도에서도 픽셀 크기가 3μm 이하로 만들 수 있는 소재 기술을 개발하고 이를 국내 최초로 OLED 마이크로디스플레이에 적용했다고 밝혔다.
+
+            디스플레이는 빛을 받으면 화학적 특성이 달라지는 포토레지스트라는 소재로 얇은 막에 세밀한 픽셀을 형성해 만든다. 포토레지스트는 디스플레이를 만드는 데 꼭 필요하지만, 소재를 만들거나 이를 다루는 기술이 어려워 그간 주로 수입 제품에 의존해오고 있다. 
+
+            2019년부터 수출규제가 시작된 뒤, ETRI는 ‘ICT 소재·부품·장비 자립 및 도전기술 개발’ 과제와 ‘저온 경화 및 고해상도 컬러 포토레지스트 소재 개발’과제 등을 수행하며 기술 자립을 위해 노력해오고 있다.
+
+            ETRI에 따르면 지금까지 포토레지스트 소재는 높은 온도에서 공정을 진행했다. 기존에 많이 쓰인 LCD 디스플레이는 구조상 유리막이 있어 고온에서 공정을 진행해도 문제가 없었지만 차세대 디스플레이로 떠오른 OLED는 높은 온도에서 빛을 내는 발광다이오드에 문제가 생길 수 있다. 
+
+            이로 인해 낮은 온도에서도 공정이 가능한 소재 기술을 개발하는 것이 관건이었다. 우선 과제 참여기관인 SKC 하이테크앤마케팅과 동진쎄미켐에서 포토레지스트의 핵심원료인 안료를 국산화하고 이를 적절히 배합하면서 낮은 온도에서도 색이 균일하게 도포될 수 있는 포토레지스트 소재를 만들었다. 
+
+            개발된 소재는 국내 경쟁기업은 물론, 일본 기업에서도 개발하지 못한 혁신적인 성과로 평가받고 있다는 설명이다. ETRI는 개발된 포토레지스트 소재를 국내 최초로 OLED에 적용했다. 연구진이 만든 시제품은 웨어러블 기기에 적합한 0.7인치 크기의 마이크로디스플레이다. 한 픽셀 당 크기는 3μm 이하로 1인치당 2300개 픽셀을 밀집해 초고해상도 패널을 제작할 수 있다. 
+
+            연구진은 2016년부터 증강현실(AR) 구현을 위한 OLED 마이크로디스플레이 관련 연구를 진행하며 시제품을 만드는 플랫폼 역할을 수행했다. 이외에도 개발된 소재의 성능을 평가하거나 세계적인 학술대회와 전시회 출품도 지원했다. 이후 삼성디스플레이는 올해 초 출시한 모바일용 OLED에 저온 PR을 활용했다. 세계 최초 상용화다.
+
+            연구를 주도한 ETRI 조남성 책임연구원은 “정부와 기업, 국책연구소가 함께 국가 과제를 통해 원천 소재 국산화를 이루는 데 성공했다”며 “이번 성과가 소부장 자립은 물론, 우리나라가 디스플레이 산업 종주국 지위를 유지하는 데 도움이 되기를 바란다”고 강조했다.
+
+            향후 ETRI는 1인치당 픽셀이 3000개가 들어갈 정도로 더욱 높은 해상도를 지닌 패널을 개발하기 위한 후속 연구를 진행할 예정이다. 개발된 마이크로디스플레이 기술을 관련 기업에 이전하는 논의를 진행 중이다.
+        </p>
+    </div>
+    
+    <hr>
+
+    <h2>표 스타일</h2>
+    <table>
+        <caption>성적표</caption>
+        <tr>
+            <td>구분</td>
+            <td>점수</td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>국어</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>asdkjalfkjaklsjdlkjaslkdjlaksjdklasjdklasjdskljdalksjdklasjdklajdlaskdjalksjdkla</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+</html>

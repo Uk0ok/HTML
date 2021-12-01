@@ -1,0 +1,50 @@
+div, input {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+#login-wrap {
+    width: 300px;
+    height: 120px;
+}
+
+#login-form {
+    height: 80%;
+}
+
+#login-form>div {
+    height: 100%;
+    float: left;
+}
+
+#login-form-input {
+    width: 65%;
+}
+
+#login-form-submit {
+    width: 35%;
+}
+
+#login-form-input>input {
+    height: 50%;
+    width: 100%;
+}
+
+#login-form-submit>input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#login-link {
+    height: 20%;
+    text-align: center;
+    padding: 5px;
+}
+
+#login-link>a {
+    text-decoration: none;
+    color : black;
+    font-size: 0.8em;
+}

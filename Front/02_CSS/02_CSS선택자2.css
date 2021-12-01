@@ -1,0 +1,213 @@
+/* 속성 선택자 테스트 */
+/* div 중에 name 속성을 가지고 있는 태그 */
+/* div[name] {
+    background-color: orangered;
+} */
+/* div 중에 name 속성의 값이 name1과 일치하는 태그 (여러개중 한개는 안됨) */
+div[name=name1] {
+    background-color: orange;
+}
+/* div 중에 name 속성 안에 name1이 포함되어 있는 태그(단, 속성값이 띄워쓰기로 구분 되어 있어야 함 */
+div[name~=name1] {
+    background-color: yellow;
+}
+/* div 중에 class 속성에서 class로 시작되는 태그 (단, -로 구분) */
+div[class|=class] {
+    background-color: springgreen;
+}
+/* div 중에 name 속성이 name으로 시작되는 태그 */
+div[name^=name] {
+    background-color: blue;
+}
+/* div 중에 class 속성이 class로 끝나는 태그 */
+div[class$=class] {
+    color: white;
+}
+/* div 중에 class가 포함되는 속성에 i를 포함하는 태그 */
+div[class*=i] {
+    background-color: greenyellow;
+    color: red;
+}
+/* 클래스 div-class인 것 중 name 속성 값이 name3이 포함되어 있는 경우 (단, 속성값이 띄워쓰기로 구분) */
+.div-class[name~=name3] {
+    background-color: pink;
+}
+
+/* ------------------------------------------------------------- */
+/* 자손 선택자와 후손 선택자 테스트 */
+#test1>h4 {
+    background-color: orange;
+}
+
+#test1>ul>h4 {
+    background-color: purple;
+}
+
+#test1 li {
+    color : red;
+}
+
+#test1>ul>li {
+    background-color:salmon;
+}
+
+/* --------------------------------------------------------------- */
+/* 동위 선택자 테스트 */
+#div-test {
+    background-color: red;
+}
+/* a+b : a선택자 바로 뒤에 있는 b선택자 단 한 개만 스타일 적용 */
+#div-test+div {
+    background-color: seagreen;
+}
+/* a~b : 선택자 뒤에 있는 b선택자 모두 스타일 적용 */
+/* #div-test~div {
+    background-color: orange;
+    color: white;
+} */
+
+/* ----------------------------------------------------------------- */
+/* 반응 선택자 테스트 */
+#active-test, #hover-test {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 300px;
+}
+
+#active-test:active {
+    background-color: yellow;
+    color: red;
+}
+
+#hover-test:hover {
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+
+#hover-test:active {
+    background-color: yellow;
+    color: red;
+}
+
+/* ------------------------------------------------------------------- */
+/* 상태 선택자 테스트 */
+input[type=checkbox]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+input[type=checkbox]:checked+label {
+    font-size: 1.5em;
+
+}
+
+#userId:focus, #userPwd:focus {
+    background-color: wheat;
+    border: 3px solid red;
+}
+
+option:enabled {
+    background-color: pink;
+    color: teal;
+}
+
+option:disabled {
+    background-color: greenyellow;
+
+}
+
+button:disabled {
+    color: red;
+}
+/* ---------------------------------------------------------------------- */
+
+/* 일반 구조 선택자 테스트 */
+/* 형제 관계 태그 중 첫 번째 태그 선택 */
+#test2 p:first-child {
+    background-color: red;
+    color: white;
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+/* 마지막 자식이 p 태그가 아니어서 스타일 적용 x */
+#test2 p:last-child {
+    background-color: orange;
+    color: white;
+}
+
+/* 형제 관계 태그 중 앞에서 수열번 째 태그 선택 */
+/* 수식을 사용하거나 수식 대신 odd(홀수), even(짝수)를 대입해 줄 수 있다. */
+#test2 p:nth-child(even) {
+    background-color: yellowgreen;
+    color: white;
+}
+
+/* 형제 관계 태그 중 뒤에서 수열번 째 태그 선택 */
+#test2 p:nth-last-child(4) {
+    background-color: skyblue;
+    color: white;
+}
+
+/* ----------------------------------------------------------------------- */
+/* 형태 구조 선택자 테스트 */
+/* 형제 관련 태그 중 첫 번째 태그 선택 */
+#test3 p:first-of-type {
+    background-color: red;
+    color: white;
+}
+
+/* 형제 관련 태그 중 마지막 태그 선택 */
+#test3 p:last-of-type {
+    background-color: orange;
+    color: white;
+}
+
+/* 형제 관계 태그 중 앞에서 수열번 째 태그 선택 */
+#test3 p:nth-of-type(2n) {
+    background-color: yellowgreen;
+    color: white;
+}
+
+/* 형제 관계 태그 중 뒤에서 수열번 째 태그 선택 */
+#test3 p:nth-last-of-type(4) {
+    background-color: skyblue;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------- */
+/* 문자 선택자 테스트 */
+/* 첫 번째 글자를 선택해서 스타일 적용 */
+#test4 p::first-letter {
+    font-size: 2em;
+}
+
+/* 첫 번쨰 라인을 선택해서 스타일 적용 */
+#test4 p::first-line {
+    background-color: wheat;
+}
+
+/* 태그 앞에 위치하는 공간을 선택 */
+#test4 p::before {
+    content: "1.";
+}
+
+/* 태그 뒤에 위치하는 공간을 선택 */
+#test4 p::after {
+    content: "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.";
+}
+
+#test4 p::selection {
+    background-color: hotpink;
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 부정 선택자 테스트 */
+/* #test5 p:not(.p) {
+    background-color: chocolate;
+} */
+
+#test5 p:not(:nth-child(even)) {
+    background-color: coral;
+}
