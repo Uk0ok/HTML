@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택 (추가 선택자)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>자손, 자식으로 선택</h1>
+
+    <div>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <ul>
+            <li>li1</li>
+            <li>li2</li>
+            <li class="li-c">li3</li>
+            <li class="li-c">li4</li>
+            <li>li5</li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            // 자식, 자손
+
+            // 태그 가져오기 (id, class, tagName, 자식, 자손)
+            // 태그 조작하기 (css, html, text)
+
+            $('div>h1').css('color', 'red');
+
+            // div의 자손 중에서 h2 색을 blue로 바꾸기
+            $('div h2').css('color', 'blue');
+
+            // class 적용된 애들 가져와서, 배경이랑 글자색 바꾸기
+            // $('div .li-c').css('backgroundColor', 'purple');
+            // $('div .li-c').css('color', 'white');
+
+            // 위 두줄 짜리 한줄로 작성 (체이닝)
+            // $('div .li-c').css('backgroundColor', 'purple').css('color', 'white');
+
+            // 체이닝을 안쓰고도 한줄로 작성
+            $('div .li-c').css({backgroundColor:'gray',color:'purple'});
+        })
+    </script>
+
+    <hr><hr>
+
+    <h3>속성 선택자</h3>
+    <p>
+        선택자[속성]        : 해당 속성 가진 모든 요소 <br> 
+        선택자[속성 = 값]   : 속성 === 값 <br>
+        선택자[속성 ~= 값]  : 값에 해당하는 속성이 있으면 선택 <br>
+        선택자[속성 ^=]     : 시작값 <br>
+        선택자[속성 $=]     : 마지막값 <br>
+        선택자[속성 *]      : 포함 <br>
+    </p>
+
+    <!-- <input type="text">
+    <input type="number" class="test test1">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="button" value="btn~~~" class="test"> -->
+
+    <script>
+        $(function(){
+            $("input[class]").css("backgroundColor", "red");
+            $("input[type=text]").val("changed v111");
+            $("input[class~=test]").val("1234");
+            $("input[type^=ra]").attr("checked", true);
+            $("input[type$=box]").attr("checked", true);
+            // $("input[class*=st2]").css({width:"100px", height:"100px"});
+            // $("input[class*=st2]").val("val 로 바꿈 ㅋㅋ");
+            $("input[class*=st2]").css({width:"100px", height:"100px"}).val("val 로 바꿈 ㅋㅋ");
+        })
+    </script>
+
+    <hr><hr>
+
+    <h3>입력양식 선택자(input태그 type 속성에 따라 선택)</h3>
+
+    텍스트상자 : <input type="text"> <br>
+    버튼 : <input type="button"> <br>
+    체크 : <input type="checkbox"> <br>
+    파일 : <input type="file"> <br>
+    비번 : <input type="password"> <br>
+    라디오 : <input type="radio"> <br>
+    리셋 : <input type="reset"> <br>
+    제출 : <input type="submit"> <br>
+
+    <script>
+        $(function() {
+            // input들 중에서 type이 text인거 가져오기
+            $(':text').css('backgroundColor', 'red');
+
+            // button
+            // $(':button').css({width:"100px", height:"100px"}).val("버튼임ㅋㅋ");
+
+            // checkbox
+            $(':checkbox').css({backgroundColor:'yellow', color:'red'});
+            $(':checkbox').attr('checked', true);
+
+            // file
+            $(':file').css('font-size', '1.5em');
+
+            // password
+            $(':password').css({backgroundColor:'blue'});
+
+            // radio
+            $(':radio').attr('checked', true).css({width:'50px', height:'50px'});
+
+            // reset
+            $(':reset').css ({
+                backgroundColor : 'blue',
+                color : 'white',
+                border : 'none'
+            }).val("취소");
+
+            // submit
+            $(':submit').click(function() {
+                alert('submit~~clicked~~!');
+            })
+
+            // mouseenter
+            $(':submit').mouseenter(function() {
+                $(this).css('backgroundColor', 'purple');
+            })
+            // mouseout 
+            $(':submit').mouseout(function() {
+                $(this).css('backgroundColor', '');
+            })
+        })
+    </script>
+    
+    <hr><hr>
+
+    <h3>상태(checked, selected, disabled, enabled) 선택자</h3>
+
+    <h4>checked 상태 선택자 (radio, checkbox)</h4>
+    취미 : 
+    <input type="checkbox" name="hobby", value="game">
+    <input type="checkbox" name="hobby", value="movie">
+    <input type="checkbox" name="hobby", value="music">
+    <br>
+
+    <button type="button" id="btn">커져라~</button>
+
+    <script>
+        $(function() {
+            // 버튼 클릭시 현재 input 타입이 checked 상태인 요소 선택해서 스타일 추가
+            $('#btn').click(function() {
+                $('input:checked').css({width:'50px', height:'50px'});
+            })
+
+            // 체크박스 클릭 할 떄 마다 이벤트 발생시키기
+            $(':checkbox').change(function() {
+                if($(this).prop("checked")){
+                $(this).css({width:"50px", height:"50px"});
+                } else{
+                $(this).css({width:"", height:""});
+                }
+            })
+        })
+    </script>
+    <br><br>
+    <h4>selected 상태 선택자</h4>
+    
+    국적 :
+    <select name="national">
+        <option value="x">선택안함</option>
+        <option value="ko">한국</option>    <!-- value 비어있으면 text가 값으로 넘어감 -->
+        <option value="us">미국</option>
+        <option value="eu">영국</option>
+    </select>
+
+    <button type="button" onclick="test();">확인</button>
+    <br>
+    선택한 나라 : <span id="result"></span>
+
+    <script>
+        function test() {
+            // 선택된 요소 가져오기
+            const x = $('option:selected').val();
+            console.log(x);
+
+            // result에 값 대입
+            $('#result').html($('option:selected').val());
+        }
+    </script>
+
+    <h4> - disabled, enabled 상태 선택자 (input, button 등)</h4>
+
+    <button type="button">활성화버튼</button>
+    <button type="button" disabled>비활성화버튼</button>
+
+    <script>
+        $(function() {
+            $('button:enabled').css('backgroundColor', 'purple');
+            $('button:disabled').css('backgroundColor', 'aqua');
+        })
+    </script>
+
+
+
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+</body>
+</html>

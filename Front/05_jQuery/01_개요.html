@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 개요</title>
+    <!-- <script src="./resources/js/jquery-3.6.0.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>jQeury 개요</h1>
+
+    <h3>jQeury 란?</h3>
+    <p>
+        좀 더 편하게 작업하려고 jQeury를 배운다. <br>
+        js를 이용해서 라이브러리를 만들어 놓은 것 <br>
+        <br>
+        복잡한 자바스크립트 구문을 짧고 편하게 작성 가능
+    </p>
+
+    <h3>jQeury 장점</h3>
+    <p>
+        1) DOM 조작 쉬움 <br>
+        2) AJAX 지원 <br>
+        3) 플러그인, api 지원 해주는 거 많음(차트, 슬라이드 등등...) <br>
+    </p>
+
+    <h3>jQeury 라이브러리 연결 방법</h3>
+    <p>
+        1) 파일 <br>
+        2) 링크 (CDN 방식) <br>
+        <br>
+        <a href="https://jquery.com" target="_blank">제이쿼리 사이트</a>
+    </p>
+    <br><br>
+    <hr><hr><hr>
+
+    <h3 id="target">jQuery 사용해 보기</h3>
+    <p>
+        window.onload.function() {<br>
+            // 실행내용 <br>
+        } <br>
+        <br>
+        window.onload는 모든 요소가 다 로딩되고, 외부 문서들도 가져오고 나서 실행
+    </p>
+
+    <script>
+        // jQuery(document).ready(function() {
+        //     console.log("111");
+        // });
+
+        // $(document).ready(function() {
+        //     console.log("222");
+        // });
+
+        $(function() {
+            console.log("333");
+
+            // h3 요소들 가져와서, 배경 색 바꾸기 (js)
+            // const h3_ = document.getElementsByTagName("h3");
+            // for (let i = 0; i < h3_.length; ++i) {
+            //     h3_[i].style.backgroundColor = 'red';
+            // }
+
+            // h3 요소들 가져와서, 배경 색 바꾸기 (jQuery)
+            // console.log($('h3'));
+            // $('h3').css('backgroundColor', 'red');
+
+            // h1 태그의 글자색 바꾸기
+            // $('h1').css('color', 'red');
+
+            // p 태그의 글자크기 바꾸기
+            // $('p').css('font-size', '2em');
+
+            // id가 target인 요소 가져와서, 배경 색 바꾸기
+            // $('#target').css('backgroundColor', 'green');
+
+        });
+    </script>
+    
+</body>
+</html>
